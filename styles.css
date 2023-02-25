@@ -1,0 +1,115 @@
+body {
+    background-color: #2279fb;
+}
+
+.bigDivider {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+}
+
+a:visited,
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.LeftBar {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    background-color: #0066ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 1vw;
+}
+
+.LeftBar a:hover {
+    display: block;
+    color: #f2f2f2;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    float: left;
+    margin-left: 15%;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('headBG.jpg');
+    background-size: cover;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #56b5b5;
+    font-size: 2vw;
+    margin: 2%;
+}
+
+.topbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.topbar a:hover {
+    background-color: #686868;
+    color: black;
+}
+
+.main {
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.RightBar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 1px;
+    background-color: #0066ff;
+    font-size: 1vw;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.image:hover {
+    opacity: 0.5;
+}
+
+.TextBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2%;
+}

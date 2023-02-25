@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Pagina Retro </title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        //Funciones jQuery
+        $(document).ready(function() {
+            $('#homeB').on('click', function(event) {
+                //Home button
+                window.location.href = "app.html";
+                $('.LeftBar').css('visibility', 'visible');
+            });
+            $('#Fotos').on('click', function(event) {
+                //Fotos button
+                closeLeft(); //Colapsar la barra izquierda
+                $('.LeftBar').css('visibility', 'hidden');
+                $.ajax({ //Ajax request
+                    url: 'picturebook.html',
+                    type: 'GET',
+                    dataType: 'html',
+                    success: function(data) {
+                        $('.TextBody').html(data); //Cargar el html de la pagina
+                    }
+                });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bigDivider">
+        <div id="leftb" class="LeftBar">
+            <h1>Information</h1>
+            <h3><a href="#1">1. Background and Origin</a></h3>
+            <h3><a href="#2">2. Identity and Alter Egos</a></h3>
+            <h3><a href="#3">3. Appearance and Costume</a></h3>
+            <h3><a href="#4">4. Skills and Abilities</a></h3>
+            <h3><a href="#5">5. Relationships with Other Characters</a></h3>
+            <h3><a href="#6">6. History and Storylines</a></h3>
+            <h3><a href="#7">7. Popularity and Cultural Impact</a></h3>
+            <h3><a href="#8">8. Adaptations and Media Appearances</a></h3>
+            <h3><a href="#9">9. Controversies and Criticisms</a></h3>
+        </div>
+        <div id="mid" class="middle">
+            <header class="head">
+                <div class="title">
+                    <h1>Nightwing</h1>
+                    <h2>Retro page</h2>
+                </div>
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+            </header>
+            <div class="bg-dark overflow-hidden topbar">
+                <a id="homeB" class="active">Home</a>
+                <a href="#" id="Fotos">Fotos</a>
+                <a href="javascript:changeInfo('info.html')">Extra info</a>
+            </div>
+            <div class="main">
+                <div class="RightBar">
+                    <img class="image" src="nightwing.png" alt="nightwing">
+                    <ul>
+                        <li>Richard John "Dick" Grayson is a superhero appearing in American comic books published by DC Comics, commonly in association with Batman and Teen Titans. Wikipedia</li>
+                        <li><strong>Notable aliases:</strong> Boy Wonder, Dick Grayson, Dick Grayson/Robin</li>
+                        <li><strong>Parents:</strong> Batman, Mary Grayson, John Grayson</li>
+                        <li><strong>Significant others:</strong> Starfire, Barbara Gordon</li>
+                        <li><strong>Fictional universes:</strong> DC Universe, Smallville</li>
+                        <li><strong>Creators:</strong> Bob Kane, Jerry Robinson, George Pérez, Bill Finger</li>
+                    </ul>
+                </div>
+
+                <div id="Text" class="TextBody">
+                    <p>Nightwing is a superhero appearing in American comic books published by DC Comics. The character has appeared in various incarnations; the identity was adopted by Dick Grayson when he left his role as Batman's vigilante partner Robin.
+                        Although Nightwing is commonly associated with Batman, the title and concept have origins in classic Superman stories. The original Nightwing was an identity assumed by Superman when stranded on the Kryptonian city of Kandor with
+                        Jimmy Olsen. Drawing inspiration from Batman and Robin, the two protect Kandor as the superheroes Nightwing and Flamebird. Following the Crisis on Infinite Earths continuity reboot in 1985, Nightwing was re-imagined as a legendary
+                        vigilante from Krypton whose story inspires Dick Grayson's choice of name when he leaves behind his Robin identity. Other stories set among the Batman family of characters have seen acquaintances and friends of Grayson briefly
+                        assume the title, including his fellow Robin alumnus Jason Todd. Meanwhile, Superman stories have seen Superman's adopted son Chris Kent and Power Girl take up the name for brief turns as Nightwing. Various other characters have
+                        taken the name in stories set outside DC's main continuity as well. In 2013, Nightwing placed 5th on IGN's Top 25 Heroes of DC Comics and Grayson as Nightwing was ranked the #1 Sexiest Male Character in Comics by ComicsAlliance
+                        in 2013.</p>
+                    <h3 id="1">1. Background and Origin</h3>
+                    <p>Nightwing is a superhero character that first appeared in DC Comics in 1963 as Robin, the Boy Wonder's alter ego. After serving as Batman's sidekick for many years, he eventually takes on the Nightwing persona and becomes a hero in
+                        his own right.</p>
+                    <h3 id="2">2. Identity and Alter Egos</h3>
+                    <p>Nightwing's real name is Richard "Dick" Grayson. He is the first Robin and later becomes Nightwing. He has also used other aliases such as Agent 37 and Batman briefly.</p>
+                    <h3 id="3">3. Appearance and Costume</h3>
+                    <p>Nightwing's costume is mostly black with blue accents. It includes a stylized blue "wing" symbol on his chest, as well as a blue stripe down the sides of his legs. He wears black boots and gloves, and his mask covers only his eyes,
+                        leaving the rest of his face exposed.</p>
+                    <h3 id="4">4. Skills and Abilities</h3>
+                    <p>Nightwing is an expert acrobat and hand-to-hand combatant. He has also been trained in detective work and has experience as a leader of a team of heroes. He is highly skilled in the use of weapons such as escrima sticks, which are
+                        his signature weapons.</p>
+                    <h3 id="5">5. Relationships with Other Characters</h3>
+                    <p>Nightwing has had close relationships with many DC Comics characters, including Batman, the Teen Titans, and Barbara Gordon (also known as Batgirl and Oracle). He has also been involved in romantic relationships with several characters,
+                        including Starfire and Huntress.</p>
+                    <h3 id="6">6. History and Storylines</h3>
+                    <p>Nightwing has been featured in numerous comic book storylines, including his origin story as Robin, his transition to the Nightwing persona, and his time leading the Teen Titans. He has also been involved in major events such as "Infinite
+                        Crisis" and "Blackest Night."</p>
+                    <h3 id="7">7. Popularity and Cultural Impact</h3>
+                    <p>Nightwing is a popular and well-known character in the DC Comics universe. He has been featured in various adaptations, including animated series, video games, and live-action television shows.</p>
+                    <h3 id="8">8. Adaptations and Media Appearances</h3>
+                    <p>Nightwing has appeared in many media adaptations, including the "Teen Titans" animated series, the "Young Justice" animated series, and the live-action television series "Titans." He has also appeared in several video games, such as
+                        "Batman: Arkham" and "Injustice."</p>
+                    <h3 id="9">9. Controversies and Criticisms</h3>
+                    <p>Nightwing has faced some criticism over the years, particularly related to his treatment of female characters and his portrayal as a male power fantasy. However, he remains a popular and iconic character in the DC Comics universe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
